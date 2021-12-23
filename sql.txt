@@ -1,0 +1,11 @@
+CREATE TABLE `tapsoft`.`employees` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NULL , `age` INT NULL , `dept_id` INT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `tapsoft`.`department` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NULL , `location` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+INSERT INTO `employees` (`id`, `name`, `age`, `dept_id`) VALUES ('1', 'rohan', '25', '12');
+
+INSERT INTO `department` (`id`, `name`, `location`) VALUES ('12', 'IT', 'Pune');
+
+SELECT * FROM employees JOIN department ON employees.dept_id=department.id;
+
+SELECT * FROM department
